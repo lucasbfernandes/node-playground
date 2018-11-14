@@ -1,4 +1,4 @@
-import config from './config';
-import expressFactory from './factory';
+import { expressConfig } from './config';
+import { expressFactory } from './factory';
 
-export { config, expressFactory };
+export { expressConfig, expressFactory };

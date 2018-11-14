@@ -1,5 +1,5 @@
-const config = {
-    root: 'v1/'
+const expressConfig = {
+    apiRoot: 'v1/'
 };
 
-export default config;
+export { expressConfig };
