@@ -1,0 +1,26 @@
+{
+  "name": "node-playground",
+  "version": "1.0.0",
+  "description": "NodeJS project example using AWS services",
+  "main": "src",
+  "scripts": {
+    "start": "nodemon"
+  },
+  "devDependencies": {
+    "nodemon": "^1.10.2"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "mongoose": "^4.13.12"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasbfernandes/node-playground.git"
+  },
+  "author": "Lucas Borges Fernandes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucasbfernandes/node-playground/issues"
+  },
+  "homepage": "https://github.com/lucasbfernandes/node-playground#readme"
+}
