@@ -1,5 +1,5 @@
 const expressConfig = {
-    apiRoot: '/v1/'
+    apiRoot: '/v1'
 };
 
 export { expressConfig };

@@ -2,7 +2,9 @@ import express from 'express';
 
 const expressFactory = {
     getExpressInstance: (apiRoot, router) => {
-        return express(apiRoot, router);
+        const instance = express();
+        instance.use(apiRoot, router);
+        return instance;
     }
 };
 
