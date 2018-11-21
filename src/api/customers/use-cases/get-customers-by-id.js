@@ -8,9 +8,9 @@ const serializeData = (customers) => {
     return customers.map((customer) => getSerializedObject(customer));
 };
 
-const getCustomers = () => {
-    return getCustomersProvider()
+const getCustomersById = (customerId) => {
+    return getCustomersProvider(customerId)
         .then(customers => serializeData(customers));
 };
 
-export { getCustomers };
+export { getCustomersById };

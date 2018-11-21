@@ -1,7 +1,13 @@
 import { customersModel } from "../model";
+import mongoose from 'mongoose';
 
-const getCustomersProvider = () => {
-    return customersModel.aggregate([
+const getCustomersQuery = (customerId) => {
+    return [
+        {
+            $match: {
+                ...(customerId && { _id: mongoose.Types.ObjectId(customerId) })
+            }
+        },
         {
             $project: {
                 _id: false,
@@ -10,7 +16,12 @@ const getCustomersProvider = () => {
                 birthDate: '$birthDate'
             }
         }
-    ]);
+    ];
+};
+
+const getCustomersProvider = (customerId) => {
+    const query = getCustomersQuery(customerId);
+    return customersModel.aggregate(query);
 };
 
 export { getCustomersProvider };
