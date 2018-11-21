@@ -1,9 +1,7 @@
-import { getCustomersQuery } from "../providers";
+import { getCustomersProvider } from "../providers";
 
 const getSerializedObject = (customer) => {
-    return {
-        name: customer.name ? customer.name : ''
-    };
+    return customer;
 };
 
 const serializeGetCustomers = (customers) => {
@@ -11,7 +9,7 @@ const serializeGetCustomers = (customers) => {
 };
 
 const getCustomers = () => {
-    return getCustomersQuery()
+    return getCustomersProvider()
         .then(customers => serializeGetCustomers(customers));
 };
 

@@ -1,3 +1,4 @@
-import { getCustomersQuery } from "./get-customers";
+import { getCustomersProvider } from "./get-customers";
+import { insertCustomersProvider } from "./insert-customers";
 
-export { getCustomersQuery };
+export { getCustomersProvider, insertCustomersProvider };

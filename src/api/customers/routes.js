@@ -5,4 +5,6 @@ const customersRouter = express.Router();
 
 customersRouter.get('/', customersController.processGetCustomersRequest);
 
+customersRouter.post('/', customersController.processPostCustomersRequest);
+
 export { customersRouter };
