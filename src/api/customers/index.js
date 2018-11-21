@@ -1,3 +1,3 @@
-import { customersRouter } from './customers.routes';
+import { customersRouter } from './routes';
 
 export { customersRouter };

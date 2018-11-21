@@ -1,5 +1,5 @@
-import { customersGetService } from './services/customers.get';
-import { customersGetSerializer } from './serializers/customers.get';
+import { customersGetService } from './services/get';
+import { customersGetSerializer } from './serializers/get';
 
 const customersController = {
     processGetRequest: (req, res) => {

@@ -1,8 +1,4 @@
-import { customersModel } from '../customers.model';
-
-const getCustomersQuery = () => {
-    return customersModel.find({});
-};
+import { getCustomersQuery } from '../queries/get';
 
 const customersGetService = {
     getCustomers: () => {

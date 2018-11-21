@@ -1,8 +1,7 @@
 const getSerializedGetObject = (customer) => {
     return {
         name: customer.name ? customer.name : ''
-    }
-    ;
+    };
 };
 
 const customersGetSerializer = {
