@@ -1,12 +1,11 @@
-import { customersGetService } from './services/get';
-import { customersGetSerializer } from './serializers/get';
+import { getCustomers } from './use-cases';
 
 const customersController = {
-    processGetRequest: (req, res) => {
-        return customersGetService.getCustomers()
-            .then(customers => res.json(customersGetSerializer.serializeGetCustomers(customers)))
-            .catch(err => res.json({ error: err.message }));
+    processGetCustomersRequest: (req, res) => {
+        return getCustomers()
+            .then(customers => res.json(customers))
+            .catch(error => res.json({ error }));
     }
-}
+};
 
 export { customersController };

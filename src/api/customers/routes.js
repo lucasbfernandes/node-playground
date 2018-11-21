@@ -3,6 +3,6 @@ import { customersController } from './controller';
 
 const customersRouter = express.Router();
 
-customersRouter.get('/', customersController.processGetRequest);
+customersRouter.get('/', customersController.processGetCustomersRequest);
 
 export { customersRouter };

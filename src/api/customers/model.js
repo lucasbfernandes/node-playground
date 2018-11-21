@@ -3,7 +3,7 @@ import mongoose, { Schema } from 'mongoose';
 const customersSchema = new Schema({
     name: {type: String, required: true},
     address: {type: String, required: true},
-    creationDate: {type: Date, required: true}
+    birthDate: {type: Date, required: true}
 }, {autoIndex: false});
 
 
