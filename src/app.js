@@ -1,6 +1,6 @@
-import { expressConfig, expressFactory } from './common/express';
-import { serverConfig, projectConfig } from './common/config';
-import { mongoConnection, mongoConfig } from './common/mongoose';
+import { expressConfig, expressFactory } from './common/config/express';
+import { serverConfig, projectConfig } from './common/config/project';
+import { mongoConnection } from './common/config/mongoose';
 import { router } from './api';
 import http from 'http';
 
