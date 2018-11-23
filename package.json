@@ -4,7 +4,8 @@
   "description": "NodeJS project example using AWS services",
   "main": "src",
   "scripts": {
-    "start": "nodemon"
+    "start": "nodemon",
+    "prestart": "npm install"
   },
   "devDependencies": {
     "nodemon": "^1.10.2",
