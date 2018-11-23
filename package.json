@@ -17,7 +17,8 @@
     "express": "^4.16.2",
     "mongoose": "^4.13.12",
     "bluebird": "^3.5.1",
-    "body-parser": "^1.18.2"
+    "body-parser": "^1.18.2",
+    "aws-sdk": "^2.284.1"
   },
   "repository": {
     "type": "git",
