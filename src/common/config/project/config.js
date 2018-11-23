@@ -1,6 +1,6 @@
 const serverConfig = {
-    ip: '0.0.0.0',
-    port: 9000
+    ip: process.env.IP || '0.0.0.0',
+    port: process.env.PORT || 9000
 };
 
 const projectConfig = {
