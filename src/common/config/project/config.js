@@ -4,7 +4,7 @@ const serverConfig = {
 };
 
 const projectConfig = {
-    environment: 'TODO'
+    environment: process.env.NODE_ENV
 };
 
 export { serverConfig, projectConfig };

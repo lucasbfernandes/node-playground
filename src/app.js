@@ -36,6 +36,6 @@ const onGetMongoCredentialsError = (error) => {
     console.info(`There was an error fetching mongo credentials: ${error}`);
 };
 
-awsProvider.getAwsSecret('mongo_local')
+awsProvider.getAwsSecret(`mongo_${projectConfig.environment}`)
     .then(secret => onGetMongoCredentialsSuccess(secret))
     .catch(error => onGetMongoCredentialsError(error));
