@@ -27,8 +27,8 @@ const startServer = () => {
 };
 
 const onGetMongoCredentialsSuccess = (secret) => {
-    // const { username, password, host, database } = secret;
-    // connectMongo(`mongodb://${username}:${password}@${host}/${database}?authSource=admin`, { useMongoClient: true });
+    const { username, password, host, database } = secret;
+    connectMongo(`mongodb://${username}:${password}@${host}/${database}?authSource=admin`, { useMongoClient: true });
     startServer();
 };
 
@@ -36,6 +36,6 @@ const onGetMongoCredentialsError = (error) => {
     console.info(`There was an error fetching mongo credentials: ${error}`);
 };
 
-awsProvider.getAwsSecret(`mongo_${projectConfig.environment}`)
+awsProvider.getAwsSecret(`mongodb_${projectConfig.environment}`)
     .then(secret => onGetMongoCredentialsSuccess(secret))
     .catch(error => onGetMongoCredentialsError(error));
