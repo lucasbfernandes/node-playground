@@ -28,7 +28,7 @@ const startServer = () => {
 
 const onGetMongoCredentialsSuccess = (secret) => {
     const { username, password, host, database } = secret;
-    connectMongo(`mongodb://${username}:${password}@${host}/${database}?authSource=admin`, { useMongoClient: true });
+    connectMongo(`mongodb://${username}:${password}@${host}/${database}?ssl=true&replicaSet=mongodb-dev-shard-0&authSource=admin&retryWrites=true`, { useMongoClient: true });
     startServer();
 };
 
